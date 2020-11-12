@@ -1,0 +1,44 @@
+let x = [16,29,99,501];
+let num = '';
+for (let i = 0; i < x.length; i++){
+    num = num + x[i]
+    let roman = '';
+    while(num >= 1000){
+        num = num - 1000
+        roman = roman + 'm'
+    }while(num >= 900){
+        num = num - 900
+        roman = roman + 'cm'
+    }while(num >= 500){
+        num = num - 500
+        roman = roman + 'd'
+    }while(num >= 400){
+        num = num - 400
+        roman = roman + 'cd'
+    }while(num >= 100){
+        num = num - 100
+        roman = roman + 'c'
+    }while(num >= 90){
+        num = num - 90
+        roman = roman + 'xc'
+    }while(num >= 40){
+        num = num - 40
+        roman = roman + 'xl'
+    }while(num >= 10){
+        num = num - 10
+        roman = roman + 'x'    
+    }while(num >= 9){
+        num = num - 9
+        roman = roman + 'ix'
+    }while(num >= 5){
+        num = num - 5
+        roman = roman + 'v'
+    }while(num >= 4){
+        num = num - 4
+        roman = roman + 'iv'
+    }while(num >= 1){
+        num = num - 1
+        roman = roman + 'i'
+    }
+    console.log(roman.toUpperCase())
+}
